@@ -1,4 +1,4 @@
-from src.A_Default import ____
+from src.Ej_3_1 import ____
 
 
 def test_____():
