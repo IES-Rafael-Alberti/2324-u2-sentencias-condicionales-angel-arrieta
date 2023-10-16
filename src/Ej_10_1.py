@@ -35,11 +35,11 @@ def comanda(pizza, preferencia):
 if __name__ == "__main__":
     pizza = ["tomate", "queso"]
     preferencia = str(input("Bienvenidos a la pizzeria Bella Napoli\n¿Es usted vegetariano o no? (si/no)\t"))
-    opciones = menu(preferencia)
+    opciones = menu(preferencia.lower())
     if type(opciones) == type(["referencia"]):
         while opciones != []:
             print(opciones)
-            respuesta = anadir(opciones, str(input("Escoja un ingrediente (Introduce 'salir' para terminar)\t")))
+            respuesta = anadir(opciones, (str(input("Escoja un ingrediente (Introduce 'salir' para terminar)\t"))).lower())
             if type(respuesta) == type(("ref","ref")):
                 opciones, ingrediente = respuesta
                 pizza.append(ingrediente)
